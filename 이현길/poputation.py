@@ -148,10 +148,6 @@ def insert_data(conn, cur, databaseName, tableName, sqlInsert):
         print(e)  # 에러메세지 출력
 
 
-def create_view(conn, cur, databaseName, viewName, sqlCreate):
-    pass
-
-
 def join_tables(conn, cur, databaseName, tableName1, tableName2, tableName3, joinName):
     try:
         sqlDrop = f"""-- sql
