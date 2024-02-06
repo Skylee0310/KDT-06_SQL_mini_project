@@ -274,20 +274,10 @@ def main():
     joined_view = "pop_school_view"
     
     join_tables(conn, cur, database, population_table, schoolage_table, birthrate_table, joined_view)
-    
+
     popDF = table_to_dataframe(cur, database, joined_view)
 
     print(popDF)
-
-    plt.plot(popDF["연도"], popDF["총 인구수(만명)"])
-    plt.plot(popDF["연도"], popDF["학령인구수(만명)"])
-    plt.xlabel("연도")
-    plt.ylabel("총 인구수(만명)")
-    plt.xticks(popDF["연도"])
-    plt.show()
-
-
-
 
 
 if __name__ == '__main__':
